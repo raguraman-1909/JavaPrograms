@@ -1,15 +1,11 @@
-public class CheckPalindrome {
+public class PalindromeCheck {
+    public static boolean isPalindrome(String str) {
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equals(reversed);
+    }
+
     public static void main(String[] args) {
-        String str = "radar";
-        boolean isPalindrome = true;
-
-        for (int i = 0; i < str.length() / 2; i++) {
-            if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
-                isPalindrome = false;
-                break;
-            }
-        }
-
-        System.out.println("Is Palindrome? " + isPalindrome);
+        String palindrome = "level";
+        System.out.println("Is '" + palindrome + "' a palindrome? " + isPalindrome(palindrome));
     }
 }
