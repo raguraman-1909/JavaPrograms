@@ -1,0 +1,16 @@
+public class FindLargestElement {
+    public static int findLargest(int[] array) {
+        int max = array[0];
+        for (int num : array) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {12, 45, 23, 67, 89, 34, 56};
+        System.out.println("Largest element: " + findLargest(nums));
+    }
+}
